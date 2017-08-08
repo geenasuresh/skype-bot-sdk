@@ -88,6 +88,9 @@ class ApiClient {
         } else {
             $params = $api->getRequestParams();
             if ($api->isJsonRequest()) {
+                 $this->getHttpClient()->setHeader(
+                        'Content-Type', 'application/json'
+                );
                 $params = json_encode($params);
             }
             switch ($requestMethod) {
