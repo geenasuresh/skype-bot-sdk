@@ -29,6 +29,16 @@ class Activity extends Entity
         return $this->get('conversation', Conversation::class);
     }
 
+     function setFrom(Address $from)
+    {
+        return $this->set('from', $from);
+    }
+
+    function getFrom()
+    {
+        return $this->get('from', Address::class);
+    }
+    
     public function setType($type)
     {
         return $this->set('type', $type);
