@@ -11,7 +11,10 @@ abstract class Entity
         if ($obj === null) {
             $obj = new \stdClass();
         }
+        else
+        {
         $this->validateObject($obj);
+        }
         $this->rawObj = $obj;
     }
 
