@@ -38,6 +38,10 @@ class Payload extends Entity
     {
         return $this->set('type', $type);
     }
+    function setFrom(Address $from)
+    {
+        return $this->set('from', $from);
+    }
 
     /**
      * @return Address
